@@ -99,7 +99,7 @@ $(document).ready(function() {
     $(".hidden").removeClass("hidden");
     var rowsToAdd = [];
     for (var i = 0; i < data.length; i++) {
-      rowsToAdd.push(createAuthorRow(data[i]));
+      rowsToAdd.push(createOption(data[i]));
     }
     authorSelect.empty();
     console.log(rowsToAdd);
@@ -111,7 +111,7 @@ $(document).ready(function() {
   function renderCategoryList(data) {
     var rowsToAdd = [];
     for (var i = 0; i < data.length; i++) {
-      rowsToAdd.push(createAuthorRow(data[i]));
+      rowsToAdd.push(createOption(data[i]));
     }
     categorySelect.empty();
     console.log(rowsToAdd);
@@ -121,10 +121,10 @@ $(document).ready(function() {
   }
 
   // Creates the author options in the dropdown
-  function createAuthorRow(author) {
+  function createOption(obj) {
     var listOption = $("<option>");
-    listOption.attr("value", author.id);
-    listOption.text(author.name);
+    listOption.attr("value", obj.id);
+    listOption.text(obj.name);
     return listOption;
   }
 
