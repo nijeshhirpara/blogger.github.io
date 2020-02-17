@@ -32,4 +32,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/author-manager.html"));
   });
 
+  // authors route loads category-manager.html
+  app.get("/categories", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/category-manager.html"));
+  });
+
 };
