@@ -158,6 +158,7 @@ $(document).ready(function() {
 
   function renderCategoryList(data) {
     var rowsToAdd = [];
+    rowsToAdd.push("<option value=''>All categories</option>");
     for (var i = 0; i < data.length; i++) {
       rowsToAdd.push(createOption(data[i]));
     }
