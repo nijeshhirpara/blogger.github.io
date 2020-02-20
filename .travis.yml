@@ -8,3 +8,7 @@ cache:
     - node_modules
 before_install:
   - mysql -e 'CREATE DATABASE blogger_test;'
+deploy:
+  provider: heroku
+  api_key:
+    secure: "36c6a624-b008-4d94-905b-ceee5b74a367"
